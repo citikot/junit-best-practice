@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    lazy-initialization: true
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/junit
+    username: junit
+    password: junit
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+        show_sql: true
+        format_sql: true
+
+app:
+  apod:
+    grabber:
+      cron: "0 0 0 * * *"
+      hd: true
+
+nasa:
+  api:
+    key: DEMO_KEY
+    url: https://api.nasa.gov

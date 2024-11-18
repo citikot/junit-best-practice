@@ -1,0 +1,13 @@
+{
+  "request" : {
+    "url" : "/planetary/apod?date=2007-12-03&hd=true&api_key=testApiKey",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "body-get-apod.json",
+    "headers" : {
+      "Content-Type" : "application/json"
+    }
+  }
+}
